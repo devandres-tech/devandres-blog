@@ -56,9 +56,9 @@ const Home = ({ allPostsData }: IAllPostData) => {
           </div>
           <p style={{ marginTop: '0' }}>
             Hi, I am Andres Alcocer and I like everything involving the world of
-            frontend development. I enjoy working within the React ecosystem.
-            When I am not coding or writing for my blog, I like to try new
-            grilling recipes and keep up with the latest football stats.
+            frontend development. When I am not coding or writing for my blog, I
+            like to try new grilling recipes and keep up with the latest
+            football stats.
           </p>
           <p>You can find me at:</p>
         </section>
