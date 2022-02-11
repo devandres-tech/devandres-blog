@@ -39,8 +39,7 @@
 
 .list {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding-left: 0;
 }
 
 .listItem {
@@ -49,4 +48,8 @@
 
 .lightText {
   color: #666;
+}
+
+.homeContainer {
+  display: flex;
 }

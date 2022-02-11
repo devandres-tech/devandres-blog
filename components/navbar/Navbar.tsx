@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <nav className={styles.container}>
       <div>logo</div>
-      <div>
+      <div className={styles.container__rightContent}>
         <Link href='/'>Blog</Link>
         <Link href='/about'>About</Link>
       </div>
