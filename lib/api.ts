@@ -4,7 +4,7 @@ import html from 'remark-html'
 import path from 'path'
 import matter from 'gray-matter'
 
-const postsDirectory = path.join(process.cwd(), 'posts')
+const postsDirectory = path.join(process.cwd(), '_posts')
 
 export function getSortedPostsData() {
   const fileNames = fs.readdirSync(postsDirectory)
@@ -19,7 +19,7 @@ export function getSortedPostsData() {
     return {
       slug,
       title: matterResult.data.title,
-      date: matterResult.data.title,
+      date: matterResult.data.date,
     }
   })
 

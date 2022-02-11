@@ -1,12 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from './navbar.module.scss'
 
 export default function Navbar() {
   return (
     <nav className={styles.container}>
+      <div>logo</div>
       <div>
-        <div>Blog</div>
+        <Link href='/'>Blog</Link>
+        <Link href='/about'>About</Link>
       </div>
     </nav>
   )

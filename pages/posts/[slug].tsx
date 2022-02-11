@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import Layout from '../../components/layout/Layout'
 import Date from '../../components/Date'
-import { getAllPostSlugs, getPostData } from '../../lib/posts'
+import { getAllPostSlugs, getPostData } from '../../lib/api'
 import utilStyles from '../../styles/utils.module.scss'
 
 interface IPost {
