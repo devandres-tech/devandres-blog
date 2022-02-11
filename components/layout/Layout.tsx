@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import Navbar from '../navbar/Navbar'
-import styles from './layout.module.scss'
+import styles from './Layout.module.scss'
 
 const name = 'Andres Alcocer'
 export const siteTitle = 'Next.js Sample Website'

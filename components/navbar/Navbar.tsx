@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import styles from './navbar.module.scss'
+import styles from './Navbar.module.scss'
 
 export default function Navbar() {
   return (

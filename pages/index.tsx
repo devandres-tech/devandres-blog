@@ -7,6 +7,7 @@ import Layout from '../components/layout/Layout'
 import utilStyles from '../styles/utils.module.scss'
 import { getSortedPostsData } from '../lib/api'
 import Date from '../components/Date'
+import ProfileImg from '../public/profile-img.png'
 
 interface IAllPostData {
   allPostsData: Array<{ slug: string; date: string; title: string }>
@@ -45,12 +46,21 @@ const Home = ({ allPostsData }: IAllPostData) => {
             ))}
           </ul>
         </section>
-        <section style={{ width: '30%' }}>
-          <p>Hello, Andres Alcocer and I want to become a software developer</p>
-          <p>
-            (This is a sample website - you’ll be building a site like this on{' '}
-            <a href='https://nextjs.org/learn'>our Next.js tutorial</a>.)
+        <section style={{ width: '30%', textAlign: 'center' }}>
+          <div style={{ padding: '30px' }}>
+            <Image
+              className={utilStyles.profileImg}
+              src={ProfileImg}
+              alt='head shot'
+            />
+          </div>
+          <p style={{ marginTop: '0' }}>
+            Hi, I am Andres Alcocer and I like everything involving the world of
+            frontend development. I enjoy working within the React ecosystem.
+            When I am not coding or writing for my blog, I like to try new
+            grilling recipes and keep up with the latest football stats.
           </p>
+          <p>You can find me at:</p>
         </section>
       </div>
     </Layout>
