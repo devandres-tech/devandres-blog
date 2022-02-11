@@ -9,7 +9,7 @@ export const siteTitle = 'Next.js Sample Website'
 
 interface ILayout {
   children?: React.ReactNode
-  home: boolean
+  home?: boolean
 }
 
 export default function Layout({ children, home }: ILayout) {
