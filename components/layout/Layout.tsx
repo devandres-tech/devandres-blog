@@ -14,16 +14,18 @@ interface ILayout {
 
 export default function Layout({ children, home }: ILayout) {
   return (
-    <div className={styles.container}>
+    <>
       <Navbar />
-      <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href='/'>
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
-    </div>
+      <div className={styles.container}>
+        <main>{children}</main>
+        {!home && (
+          <div className={styles.backToHome}>
+            <Link href='/'>
+              <a>← Back to home</a>
+            </Link>
+          </div>
+        )}
+      </div>
+    </>
   )
 }

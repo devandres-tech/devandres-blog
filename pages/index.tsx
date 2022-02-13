@@ -47,7 +47,7 @@ const Home = ({ allPostsData }: IAllPostData) => {
           </ul>
         </section>
         <section style={{ width: '30%', textAlign: 'center' }}>
-          <div style={{ padding: '30px' }}>
+          <div style={{ padding: '30px', paddingTop: '0' }}>
             <Image
               className={utilStyles.profileImg}
               src={ProfileImg}
@@ -56,7 +56,7 @@ const Home = ({ allPostsData }: IAllPostData) => {
           </div>
           <p style={{ marginTop: '0' }}>
             Hi, I am Andres Alcocer and I like everything involving the world of
-            frontend development. When I am not coding or writing for my blog, I
+            frontend development. When I am not coding or writing for my blog I
             like to try new grilling recipes and keep up with the latest
             football stats.
           </p>

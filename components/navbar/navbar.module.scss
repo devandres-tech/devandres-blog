@@ -1,10 +1,28 @@
 .container {
   display: flex;
   justify-content: space-between;
-
-  padding-bottom: 5rem;
+  font-weight: 600;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 2rem;
+  max-width: 65rem;
 
   &__rightContent {
-    color: red;
+    :first-child {
+      // margin-right: 1rem;
+    }
+  }
+}
+
+.imgContainer {
+  display: flex;
+  align-items: center;
+
+  &__img {
+    border-radius: 50%;
+  }
+
+  &:hover {
+    cursor: pointer;
   }
 }
