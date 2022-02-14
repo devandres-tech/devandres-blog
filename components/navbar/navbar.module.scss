@@ -2,13 +2,13 @@
   font-weight: 600;
   top: 0;
   width: 100%;
-  // height: 3.4rem;
   position: fixed;
   z-index: 1000;
   background-color: $color-navbar-bg;
 
   @include responsive(phone) {
-    // height: 4rem;
+    height: 3rem;
+    padding-top: 0.5rem;
   }
 
   &__innerWrapper {
