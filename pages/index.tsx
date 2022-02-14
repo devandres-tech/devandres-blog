@@ -53,7 +53,15 @@ const Home = ({ allPostsData }: IAllPostData) => {
           </ul>
         </section>
         <section className={utilStyles.bioContainer}>
-          <div>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              alignContent: 'space-between',
+            }}
+          >
             <div className={utilStyles.profileImg__container}>
               <Image
                 className={utilStyles.profileImg}

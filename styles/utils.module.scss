@@ -25,6 +25,12 @@
   line-height: 1.4;
   font-weight: 800;
   margin: 1rem 0;
+  transition: all 0.3s;
+
+  &:hover {
+    color: $color-active-link;
+    transition: all 0.3s;
+  }
 }
 
 .headingMd {
@@ -85,21 +91,22 @@
 
 .bioContainer {
   width: 30%;
+
   @include responsive(tab_medium) {
     display: flex;
     flex-direction: row-reverse;
     margin-bottom: 1rem;
     width: 100%;
-    margin-bottom: 4rem;
     align-items: center;
+  }
+
+  @include responsive(phone) {
+    display: block;
   }
 
   p {
     margin-top: 0;
     text-align: center;
-    @include responsive(tab_medium) {
-      text-align: left;
-    }
   }
 }
 
@@ -116,7 +123,20 @@
   display: flex;
   justify-content: space-between;
 
-  & > span:hover {
-    cursor: pointer;
+  & > span {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    transition: all 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      transition: all 0.3s;
+      color: $color-active-link;
+    }
+
+    @include responsive(phone) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
   }
 }
