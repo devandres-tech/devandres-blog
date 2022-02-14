@@ -36,11 +36,15 @@ const Home = ({ allPostsData }: IAllPostData) => {
             {allPostsData.map(({ slug, date, title }) => (
               <li className={utilStyles.listItem} key={slug}>
                 <Link href={`/posts/${slug}`}>
-                  <a>{title}</a>
+                  <a className={utilStyles.headingLgB}>{title}</a>
                 </Link>
                 <br />
-                <small className={utilStyles.lightText}>
+                <small
+                  style={{ display: 'flex', alignItems: 'center' }}
+                  className={utilStyles.lightText}
+                >
                   <Date dateString={date} />
+                  <span style={{ paddingLeft: '6px' }}>&#127790;</span>
                 </small>
               </li>
             ))}

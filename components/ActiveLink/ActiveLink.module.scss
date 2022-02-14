@@ -1,9 +1,6 @@
 .active {
-  border-top: 5px solid $color-primary;
-}
-
-.default {
-  color: #000;
+  border-top: 4px solid $color-active-link;
+  padding-top: 0.3rem;
 }
 
 .activeLinkContainer {

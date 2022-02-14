@@ -1,6 +1,17 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
+  const setInitialTheme = `
+      function getUserPreference() {
+        if(window.localStorage.getItem('theme') === "dark" || window.localStorage.getItem('theme') === "light") {
+          return window.localStorage.getItem('theme')
+        }
+        return window.matchMedia('(prefers-color-scheme: dark)').matches 
+          ? 'dark' 
+          : 'light'
+      }
+      document.body.dataset.theme = getUserPreference();
+    `
   return (
     <Html>
       <Head>
@@ -10,6 +21,7 @@ export default function Document() {
         />
       </Head>
       <body>
+        <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
         <Main />
         <NextScript />
       </body>

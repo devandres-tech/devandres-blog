@@ -14,11 +14,9 @@ export default function ActiveLink({ children, href }: IActiveLink) {
   return (
     <Link passHref href={href}>
       <div className={styles.activeLinkContainer}>
-        <span
-          className={router.asPath === href ? styles.active : styles.default}
-        >
+        <a className={router.asPath === href ? styles.active : styles.default}>
           {children}
-        </span>
+        </a>
       </div>
     </Link>
   )
