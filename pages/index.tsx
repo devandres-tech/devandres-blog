@@ -1,7 +1,8 @@
+import { useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import { CopyToClipboard } from 'react-copy-to-clipboard'
+import CopyToClipboard from 'react-copy-to-clipboard'
 
 import Layout from '../components/layout/layout'
 import utilStyles from '../styles/utils.module.scss'
@@ -23,6 +24,8 @@ export async function getStaticProps() {
 }
 
 const Home = ({ allPostsData }: IAllPostData) => {
+  const [emailCopied, setEmailCopied] = useState<boolean>(false)
+
   return (
     <Layout home>
       <Head>
@@ -71,6 +74,19 @@ const Home = ({ allPostsData }: IAllPostData) => {
                 alt='head shot'
               />
             </div>
+            <div
+              style={{
+                height: '1.2rem',
+                padding: '0',
+                margin: '0',
+              }}
+            >
+              {emailCopied && (
+                <span className={utilStyles.copiedEmailAlert}>
+                  <b>Email copied to clipboard!</b>
+                </span>
+              )}
+            </div>
             <div className={utilStyles.social}>
               <a href='https://github.com/devandres-tech'>
                 <span className='fa-brands fa-github' />
@@ -81,8 +97,16 @@ const Home = ({ allPostsData }: IAllPostData) => {
               <a href='https://twitter.com/devandres_tech'>
                 <span className='fa-brands fa-twitter' />
               </a>
-              <CopyToClipboard text='tuckerblackwell.dev@gmail.com'>
-                <span className='fa-solid fa-envelope' />
+              <CopyToClipboard
+                text='devandres.tech@gmail.com'
+                onCopy={() => {
+                  setEmailCopied(true)
+                  setTimeout(() => {
+                    setEmailCopied(false)
+                  }, 2000)
+                }}
+              >
+                <span className='fa-solid fa-envelope'></span>
               </CopyToClipboard>
             </div>
           </div>
