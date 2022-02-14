@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 import Layout from '../components/layout/layout'
 import utilStyles from '../styles/utils.module.scss'
@@ -62,6 +63,7 @@ const Home = ({ allPostsData }: IAllPostData) => {
               alignContent: 'space-between',
             }}
           >
+            <h3 className={utilStyles.profileImg__title}>Dev Andres</h3>
             <div className={utilStyles.profileImg__container}>
               <Image
                 className={utilStyles.profileImg}
@@ -70,10 +72,18 @@ const Home = ({ allPostsData }: IAllPostData) => {
               />
             </div>
             <div className={utilStyles.social}>
-              <span className='fa-brands fa-github' />
-              <span className='fa-brands fa-linkedin-in' />
-              <span className='fa-brands fa-twitter' />
-              <span className='fa-solid fa-envelope' />
+              <a href='https://github.com/devandres-tech'>
+                <span className='fa-brands fa-github' />
+              </a>
+              <a href='https://www.linkedin.com/in/andres-io/'>
+                <span className='fa-brands fa-linkedin-in' />
+              </a>
+              <a href='https://twitter.com/devandres_tech'>
+                <span className='fa-brands fa-twitter' />
+              </a>
+              <CopyToClipboard text='tuckerblackwell.dev@gmail.com'>
+                <span className='fa-solid fa-envelope' />
+              </CopyToClipboard>
             </div>
           </div>
           <div>
@@ -81,7 +91,8 @@ const Home = ({ allPostsData }: IAllPostData) => {
               Hi, I am Andres Alcocer and I like everything involving the world
               of frontend development. When I am not coding or writing for my
               blog I like to try new grilling recipes and keep up with the
-              latest football stats.
+              latest football
+              <span style={{ paddingLeft: '6px' }}>&#9917;</span> stats.
             </p>
           </div>
         </section>

@@ -91,6 +91,15 @@
       width: 7rem;
     }
   }
+
+  &__title {
+    display: none;
+    @include responsive(phone) {
+      padding: 0;
+      margin: 0;
+      display: block;
+    }
+  }
 }
 
 .bioContainer {
@@ -126,10 +135,10 @@
   display: flex;
   justify-content: space-between;
 
-  & > span {
+  span {
     font-size: 3rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
     transition: all 0.3s;
 
     &:hover {
