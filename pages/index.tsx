@@ -53,21 +53,23 @@ const Home = ({ allPostsData }: IAllPostData) => {
           </ul>
         </section>
         <section className={utilStyles.bioContainer}>
-          <div className={utilStyles.profileImg__container}>
-            <Image
-              className={utilStyles.profileImg}
-              src={ProfileImg}
-              alt='head shot'
-            />
+          <div>
+            <div className={utilStyles.profileImg__container}>
+              <Image
+                className={utilStyles.profileImg}
+                src={ProfileImg}
+                alt='head shot'
+              />
+            </div>
+            <div className={utilStyles.social}>
+              <span className='fa-brands fa-github' />
+              <span className='fa-brands fa-linkedin-in' />
+              <span className='fa-brands fa-twitter' />
+              <span className='fa-solid fa-envelope' />
+            </div>
           </div>
           <div>
-            <span
-              style={{ fontSize: '2rem' }}
-              className='fa-brands fa-github-square'
-            />
-          </div>
-          <div>
-            <p style={{ marginTop: '0', textAlign: 'center' }}>
+            <p>
               Hi, I am Andres Alcocer and I like everything involving the world
               of frontend development. When I am not coding or writing for my
               blog I like to try new grilling recipes and keep up with the

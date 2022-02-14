@@ -73,26 +73,33 @@
   &__container {
     padding: 30px;
     padding-top: 0;
+    padding-bottom: 1rem;
 
     @include responsive(tab_medium) {
       padding: 0;
       padding-right: 1rem;
-      width: 20rem;
+      width: 8.5rem;
     }
   }
 }
 
 .bioContainer {
   width: 30%;
-  text-align: 'center';
-
   @include responsive(tab_medium) {
     display: flex;
     flex-direction: row-reverse;
     margin-bottom: 1rem;
     width: 100%;
     margin-bottom: 4rem;
-    // align-items: center;
+    align-items: center;
+  }
+
+  p {
+    margin-top: 0;
+    text-align: center;
+    @include responsive(tab_medium) {
+      text-align: left;
+    }
   }
 }
 
@@ -101,5 +108,15 @@
 
   @include responsive(tab_medium) {
     width: 100%;
+  }
+}
+
+.social {
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+
+  & > span:hover {
+    cursor: pointer;
   }
 }
