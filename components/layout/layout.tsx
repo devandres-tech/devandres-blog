@@ -1,13 +1,13 @@
 import Link from 'next/link'
 
 import Navbar from '../navbar/navbar'
+import Footer from '../footer/footer'
 import styles from './layout.module.scss'
 
 interface ILayout {
   children?: React.ReactNode
   home?: boolean
 }
-// re
 
 export default function Layout({ children, home }: ILayout) {
   return (
@@ -23,6 +23,7 @@ export default function Layout({ children, home }: ILayout) {
           </div>
         )}
       </div>
+      <Footer />
     </>
   )
 }
