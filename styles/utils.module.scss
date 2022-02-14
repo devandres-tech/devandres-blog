@@ -86,6 +86,10 @@
       padding-right: 1rem;
       width: 8.5rem;
     }
+
+    @include responsive(phone) {
+      width: 7rem;
+    }
   }
 }
 
@@ -102,6 +106,7 @@
 
   @include responsive(phone) {
     display: block;
+    margin-bottom: 0;
   }
 
   p {
@@ -111,8 +116,6 @@
 }
 
 .blogContainer {
-  width: 70%;
-
   @include responsive(tab_medium) {
     width: 100%;
   }
@@ -124,6 +127,7 @@
   justify-content: space-between;
 
   & > span {
+    font-size: 3rem;
     padding-left: 1rem;
     padding-right: 1rem;
     transition: all 0.3s;

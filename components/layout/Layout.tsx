@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import Navbar from '../navbar/Navbar'
+import Footer from '../footer/Footer'
 import styles from './Layout.module.scss'
 
 const name = 'Andres Alcocer'
@@ -26,6 +27,7 @@ export default function Layout({ children, home }: ILayout) {
           </div>
         )}
       </div>
+      <Footer />
     </>
   )
 }
