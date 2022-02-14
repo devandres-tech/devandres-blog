@@ -13,8 +13,12 @@ body[data-theme='dark'] {
   --color-bg-toggle: #a9a9a9;
 }
 
-svg {
-  fill: red !important;
+svg[data-theme='dark'] {
+  fill: rgb(211, 211, 211);
+}
+
+svg[data-theme='light'] {
+  fill: rgb(48, 48, 48) !important;
 }
 
 body {

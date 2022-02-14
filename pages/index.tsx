@@ -7,7 +7,6 @@ import utilStyles from '../styles/utils.module.scss'
 import { getSortedPostsData } from '../lib/api'
 import Date from '../components/Date'
 import ProfileImg from '../public/profile-img.png'
-import GithubIco from '../public/github-svgrepo-com.svg'
 
 interface IAllPostData {
   allPostsData: Array<{ slug: string; date: string; title: string }>
@@ -60,13 +59,15 @@ const Home = ({ allPostsData }: IAllPostData) => {
               src={ProfileImg}
               alt='head shot'
             />
-            <div>
-              {/* media icons  */}
-              <GithubIco color={'red'} />
-            </div>
           </div>
           <div>
-            <p style={{ marginTop: '0' }}>
+            <span
+              style={{ fontSize: '2rem' }}
+              className='fa-brands fa-github-square'
+            />
+          </div>
+          <div>
+            <p style={{ marginTop: '0', textAlign: 'center' }}>
               Hi, I am Andres Alcocer and I like everything involving the world
               of frontend development. When I am not coding or writing for my
               blog I like to try new grilling recipes and keep up with the
