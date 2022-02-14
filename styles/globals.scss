@@ -13,6 +13,10 @@ body[data-theme='dark'] {
   --color-bg-toggle: #a9a9a9;
 }
 
+svg {
+  fill: red !important;
+}
+
 body {
   background: var(--color-bg-primary);
   color: var(--color-text-primary);
@@ -20,6 +24,8 @@ body {
   padding: 0;
   margin: 0;
   transition: background 0.25s ease-in-out;
+  line-height: 1.5;
+  padding-top: 3rem;
 }
 
 h1 {

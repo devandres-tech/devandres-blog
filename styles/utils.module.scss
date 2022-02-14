@@ -54,14 +54,52 @@
 }
 
 .lightText {
-  // color: #666;
+  color: #666;
 }
 
 .homeContainer {
   display: flex;
+  @include responsive(tab_medium) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 
 .profileImg {
+  height: 100%;
+  width: 100%;
   border-radius: 50%;
-  // padding: 20px;
+
+  &__container {
+    padding: 30px;
+    padding-top: 0;
+
+    @include responsive(tab_medium) {
+      padding: 0;
+      padding-right: 1rem;
+      width: 20rem;
+    }
+  }
+}
+
+.bioContainer {
+  width: 30%;
+  text-align: 'center';
+
+  @include responsive(tab_medium) {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 1rem;
+    width: 100%;
+    margin-bottom: 4rem;
+    // align-items: center;
+  }
+}
+
+.blogContainer {
+  width: 70%;
+
+  @include responsive(tab_medium) {
+    width: 100%;
+  }
 }
