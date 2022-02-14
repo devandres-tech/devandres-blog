@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
 import Navbar from '../navbar/navbar'
-import Footer from '../footer/footer'
 import styles from './layout.module.scss'
 
 interface ILayout {
@@ -24,7 +23,6 @@ export default function Layout({ children, home }: ILayout) {
           </div>
         )}
       </div>
-      <Footer />
     </>
   )
 }
