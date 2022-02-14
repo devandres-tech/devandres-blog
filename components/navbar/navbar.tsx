@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import ActiveLink from '../activeLink/activeLink'
-import styles from './Navbar.module.scss'
+import styles from './navbar.module.scss'
 import ProfileImg from '../../public/profile-img.png'
 import dynamic from 'next/dynamic'
 
