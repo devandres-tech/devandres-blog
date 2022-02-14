@@ -2,10 +2,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Layout from '../components/layout/Layout'
+import Layout from '../components/layout/layout'
 import utilStyles from '../styles/utils.module.scss'
 import { getSortedPostsData } from '../lib/api'
-import Date from '../components/Date'
+import Date from '../components/date'
 import ProfileImg from '../public/profile-img.png'
 
 interface IAllPostData {

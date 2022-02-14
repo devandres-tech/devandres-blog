@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import ActiveLink from '../ActiveLink/ActiveLink'
+import ActiveLink from '../activeLink/activeLink'
 import styles from './Navbar.module.scss'
 import ProfileImg from '../../public/profile-img.png'
 import dynamic from 'next/dynamic'
 
-const ThemeToggle = dynamic(() => import('../ThemeToggle'), {
+const ThemeToggle = dynamic(() => import('../themeToggle'), {
   ssr: false,
 })
 

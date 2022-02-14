@@ -1,8 +1,8 @@
 import Link from 'next/link'
 
-import Navbar from '../navbar/Navbar'
-import Footer from '../footer/Footer'
-import styles from './Layout.module.scss'
+import Navbar from '../navbar/navbar'
+import Footer from '../footer/footer'
+import styles from './layout.module.scss'
 
 interface ILayout {
   children?: React.ReactNode

@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 
-import styles from './ActiveLink.module.scss'
+import styles from './activeLink.module.scss'
 import Link from 'next/link'
 
 interface IActiveLink {

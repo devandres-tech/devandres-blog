@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
-import Layout from '../../components/layout/Layout'
-import Date from '../../components/Date'
+import Layout from '../../components/layout/layout'
+import Date from '../../components/date'
 import { getAllPostSlugs, getPostData } from '../../lib/api'
 import utilStyles from '../../styles/utils.module.scss'
 
