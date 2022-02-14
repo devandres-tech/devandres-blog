@@ -41,13 +41,15 @@ const ToggleThumb = styled.span`
   background: white;
   transition: transform 0.25s ease-in-out;
   transform: ${(p: any) =>
-    p.activeTheme === 'dark'
+    p.theme === 'dark'
       ? 'translate3d(calc(var(--toggle-width) - var(--toggle-height)), 0, 0)'
       : 'none'};
 `
 
 const ThemeToggle = () => {
-  const [activeTheme, setActiveTheme] = useState(document.body.dataset.theme)
+  const [activeTheme, setActiveTheme] = useState(
+    document.body.dataset.theme || ''
+  )
   const inactiveTheme = activeTheme === 'light' ? 'dark' : 'light'
 
   useEffect(() => {
@@ -63,7 +65,7 @@ const ThemeToggle = () => {
       type='button'
       onClick={() => setActiveTheme(inactiveTheme)}
     >
-      <ToggleThumb activeTheme={activeTheme} />
+      <ToggleThumb theme={activeTheme} />
       <span>🌙</span>
       <span>☀️</span>
     </ToggleButton>
