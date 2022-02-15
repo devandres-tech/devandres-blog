@@ -11,14 +11,15 @@ import Date from '../components/date'
 import ProfileImg from '../public/profile-img.png'
 import Taco from '../components/taco'
 
-interface IAllPostData {
-  allPostsData: Array<{
-    slug: string
-    date: string
-    title: string
-    postLength: number
-  }>
+export interface IPostData {
+  slug: string
+  date: string
+  title: string
+  postLength: number
+  contentHtml: string
 }
+
+export type IAllPostData = IPostData[]
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
@@ -30,7 +31,7 @@ export async function getStaticProps() {
   }
 }
 
-const Home = ({ allPostsData }: IAllPostData) => {
+const Home = ({ allPostsData }: { allPostsData: IAllPostData }) => {
   const [emailCopied, setEmailCopied] = useState<boolean>(false)
 
   return (
@@ -57,7 +58,6 @@ const Home = ({ allPostsData }: IAllPostData) => {
                   className={utilStyles.lightText}
                 >
                   <Date dateString={date} />
-                  {/* <span style={{ paddingLeft: '6px' }}>&#127790;</span> */}
                   <Taco length={postLength} />
                 </small>
               </li>

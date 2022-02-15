@@ -6,20 +6,15 @@ import Layout from '../../components/layout/layout'
 import Date from '../../components/date'
 import { getAllPostSlugs, getPostData, getSortedPostsData } from '../../lib/api'
 import utilStyles from '../../styles/utils.module.scss'
+import { IAllPostData, IPostData } from '../index'
 
-interface IPost {
-  postData: {
-    date: string
-    title: string
-    contentHtml: string
-  }
-  allPostsData: Array<{
-    title: string
-    slug: string
-  }>
-}
-
-export default function Post({ postData, allPostsData }: IPost) {
+export default function Post({
+  postData,
+  allPostsData,
+}: {
+  postData: IPostData
+  allPostsData: IAllPostData
+}) {
   const router = useRouter()
   const currentSlug = router.asPath.split('/')[2]
   const currentIdx = allPostsData.findIndex((post) => post.slug === currentSlug)
