@@ -1,12 +1,15 @@
 .footerContainer {
   text-align: center;
-  position: relative;
-  bottom: 0;
-  padding-bottom: 4rem;
+  height: 14rem;
+  background-color: $color-navbar-bg;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 
   p {
     padding: 0;
     margin: 0;
+    color: #fff;
   }
 }
 

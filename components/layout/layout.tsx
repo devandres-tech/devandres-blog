@@ -11,7 +11,14 @@ interface ILayout {
 
 export default function Layout({ children, home }: ILayout) {
   return (
-    <>
+    <div
+      style={{
+        minHeight: '95vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+      }}
+    >
       <Navbar />
       <div className={styles.container}>
         <main>{children}</main>
@@ -24,6 +31,6 @@ export default function Layout({ children, home }: ILayout) {
         )}
       </div>
       <Footer />
-    </>
+    </div>
   )
 }
