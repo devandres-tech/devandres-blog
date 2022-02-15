@@ -8,15 +8,12 @@ const postsDirectory = path.join(process.cwd(), '_posts')
 
 export function getSortedPostsData() {
   const fileNames = fs.readdirSync(postsDirectory)
+
   const allPostsData = fileNames.map((fileName) => {
     const slug = fileName.replace(/\.md$/, '')
-
     const fullPath = path.join(postsDirectory, fileName)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
-
     const matterResult = matter(fileContents)
-    console.log('matter', matterResult.content.length)
-
     return {
       slug,
       title: matterResult.data.title,
