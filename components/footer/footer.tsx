@@ -5,7 +5,8 @@ export default function Footer() {
     <footer>
       <div className={styles.footerContainer}>
         <p>
-          <span>&#169;</span> 2022, built by Andres Alcocer and powered by{' '}
+          <span>&#169;</span> {new Date().getFullYear()}, built by Andres
+          Alcocer and powered by{' '}
           <a className={styles.linkTag} href={'https://nextjs.org/'}>
             <b>Next.js</b>
           </a>

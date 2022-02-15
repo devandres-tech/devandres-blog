@@ -9,13 +9,20 @@ import utilStyles from '../styles/utils.module.scss'
 import { getSortedPostsData } from '../lib/api'
 import Date from '../components/date'
 import ProfileImg from '../public/profile-img.png'
+import Taco from '../components/taco'
 
 interface IAllPostData {
-  allPostsData: Array<{ slug: string; date: string; title: string }>
+  allPostsData: Array<{
+    slug: string
+    date: string
+    title: string
+    postLength: number
+  }>
 }
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
+
   return {
     props: {
       allPostsData,
@@ -39,7 +46,7 @@ const Home = ({ allPostsData }: IAllPostData) => {
       <div className={utilStyles.homeContainer}>
         <section className={utilStyles.blogContainer}>
           <ul className={utilStyles.list}>
-            {allPostsData.map(({ slug, date, title }) => (
+            {allPostsData.map(({ slug, date, title, postLength }) => (
               <li className={utilStyles.listItem} key={slug}>
                 <Link href={`/posts/${slug}`}>
                   <a className={utilStyles.headingLgB}>{title}</a>
@@ -50,7 +57,8 @@ const Home = ({ allPostsData }: IAllPostData) => {
                   className={utilStyles.lightText}
                 >
                   <Date dateString={date} />
-                  <span style={{ paddingLeft: '6px' }}>&#127790;</span>
+                  {/* <span style={{ paddingLeft: '6px' }}>&#127790;</span> */}
+                  <Taco length={postLength} />
                 </small>
               </li>
             ))}

@@ -15,11 +15,13 @@ export function getSortedPostsData() {
     const fileContents = fs.readFileSync(fullPath, 'utf8')
 
     const matterResult = matter(fileContents)
+    console.log('matter', matterResult.content.length)
 
     return {
       slug,
       title: matterResult.data.title,
       date: matterResult.data.date,
+      postLength: matterResult.content.length,
     }
   })
 

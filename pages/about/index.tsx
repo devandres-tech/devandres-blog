@@ -16,7 +16,7 @@ export default function About() {
           TypeScript and Next.js. I built this blog to help me keep up with the
           latest technologies in this never ending journey.
         </p>
-        <p>- Andres Alcocer</p>
+        <p style={{ textAlign: 'end', paddingTop: '2rem' }}>- Andres Alcocer</p>
       </article>
     </Layout>
   )
