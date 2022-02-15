@@ -10,9 +10,13 @@ export default function About() {
       <article>
         <h1>About</h1>
         <p>
-          asdf asdf asdf asdfa dsad asdfa sdads asd asdfa sdfad asdf asdf adsf
-          adsaa fads asdfa sdfafsafasdfafs d
+          I am a software developer who is passionate about frontend
+          development. I am mostly interested in the React ecosystem. My
+          favorite technologies are: React, React Native, Node.js, Sass,
+          TypeScript and Next.js. I built this blog to help me keep up with the
+          latest technologies in this never ending journey.
         </p>
+        <p>- Andres Alcocer</p>
       </article>
     </Layout>
   )
