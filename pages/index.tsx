@@ -111,7 +111,7 @@ const Home = ({ allPostsData }: IAllPostData) => {
             </div>
           </div>
           <div>
-            <p>
+            <p style={{ lineHeight: '1.4' }}>
               Hi, I am Andres Alcocer and I like everything involving the world
               of frontend development. When I am not coding or writing for my
               blog I like to try new grilling recipes and keep up with the
