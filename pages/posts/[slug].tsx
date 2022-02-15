@@ -1,9 +1,8 @@
 import Head from 'next/head'
-import { useRouter } from 'next/router'
-import Link from 'next/link'
 
 import Layout from '../../components/layout/layout'
 import Date from '../../components/date'
+import Pagination from '../../components/pagination/pagination'
 import { getAllPostSlugs, getPostData, getSortedPostsData } from '../../lib/api'
 import utilStyles from '../../styles/utils.module.scss'
 import { IAllPostData, IPostData } from '../index'
@@ -15,13 +14,6 @@ export default function Post({
   postData: IPostData
   allPostsData: IAllPostData
 }) {
-  const router = useRouter()
-  const currentSlug = router.asPath.split('/')[2]
-  const currentIdx = allPostsData.findIndex((post) => post.slug === currentSlug)
-
-  const nextPost = allPostsData[currentIdx + 1]
-  const prevPost = allPostsData[currentIdx - 1]
-
   return (
     <Layout>
       <Head>
@@ -34,13 +26,7 @@ export default function Post({
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
-
-      {prevPost && (
-        <Link href={`/posts/${prevPost.slug}`}>{prevPost.title}</Link>
-      )}
-      {nextPost && (
-        <Link href={`/posts/${nextPost.slug}`}>{nextPost.title}</Link>
-      )}
+      <Pagination allPostsData={allPostsData} />
     </Layout>
   )
 }
