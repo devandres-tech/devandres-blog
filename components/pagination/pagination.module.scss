@@ -5,21 +5,17 @@
 }
 
 .postBtn {
-  display: flex;
-  align-items: center;
-  height: 2.5rem;
-  transition: all 0.3s;
-  padding: 5px;
+  padding: 5px 20px;
   border: 1.4px solid lightgray;
-  border-radius: 10px;
+  border-radius: 8px;
 
   &:hover {
+    background-color: rgba(66, 66, 66, 0.26);
     cursor: pointer;
-    background-color: rgb(87, 87, 87);
-    transition: all 0.3s;
   }
   i {
     font-size: 1rem;
+    color: $color-active-link;
   }
   a {
     color: $color-active-link;

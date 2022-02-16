@@ -22,11 +22,14 @@ export default function Pagination({
         {prevPost && (
           <Link href={`/posts/${prevPost.slug}`} passHref>
             <div className={styles.postBtn}>
-              <i
-                className='fa-solid fa-angle-left'
-                style={{ paddingRight: '0.5rem' }}
-              />
-              <a>{prevPost.title}</a>
+              <p style={{ padding: 0, margin: 0 }}>Previous</p>
+              <div>
+                <i
+                  className='fa-solid fa-angles-left'
+                  style={{ paddingRight: '0.3rem' }}
+                />
+                <a>{prevPost.title}</a>
+              </div>
             </div>
           </Link>
         )}
@@ -35,11 +38,14 @@ export default function Pagination({
         {nextPost && (
           <Link href={`/posts/${nextPost.slug}`} passHref>
             <div className={styles.postBtn}>
-              <a>{nextPost.title}</a>
-              <i
-                className='fa-solid fa-angle-right'
-                style={{ paddingLeft: '0.5rem' }}
-              />
+              <p style={{ padding: 0, margin: 0, textAlign: 'right' }}>Next</p>
+              <div style={{ textAlign: 'right' }}>
+                <a>{nextPost.title}</a>
+                <i
+                  className='fa-solid fa-angles-right'
+                  style={{ paddingLeft: '0.3rem' }}
+                />
+              </div>
             </div>
           </Link>
         )}
