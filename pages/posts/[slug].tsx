@@ -6,6 +6,7 @@ import Pagination from '../../components/pagination/pagination'
 import { getAllPostSlugs, getPostData, getSortedPostsData } from '../../lib/api'
 import utilStyles from '../../styles/utils.module.scss'
 import { IAllPostData, IPostData } from '../index'
+import Taco from '../../components/taco'
 
 export default function Post({
   postData,
@@ -21,8 +22,12 @@ export default function Post({
       </Head>
       <article>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-        <div className={utilStyles.lightText}>
+        <div className={utilStyles.lightText} style={{ display: 'flex' }}>
           <Date dateString={postData.date} />
+          <span style={{ marginLeft: '0.3rem', marginRight: '0.3rem' }}>
+            &#8226;
+          </span>
+          <Taco length={postData.contentHtml.length} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>

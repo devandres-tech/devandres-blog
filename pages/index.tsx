@@ -127,6 +127,9 @@ const Home = ({ allPostsData }: { allPostsData: IAllPostData }) => {
                   className={utilStyles.lightText}
                 >
                   <Date dateString={date} />
+                  <span style={{ marginLeft: '0.3rem', marginRight: '0.3rem' }}>
+                    &#8226;
+                  </span>
                   <Taco length={postLength} />
                 </small>
               </li>
