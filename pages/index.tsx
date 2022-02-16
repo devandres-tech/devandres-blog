@@ -45,25 +45,6 @@ const Home = ({ allPostsData }: { allPostsData: IAllPostData }) => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <div className={utilStyles.homeContainer}>
-        <section className={utilStyles.blogContainer}>
-          <ul className={utilStyles.list}>
-            {allPostsData.map(({ slug, date, title, postLength }) => (
-              <li className={utilStyles.listItem} key={slug}>
-                <Link href={`/posts/${slug}`}>
-                  <a className={utilStyles.headingLgB}>{title}</a>
-                </Link>
-                <br />
-                <small
-                  style={{ display: 'flex', alignItems: 'center' }}
-                  className={utilStyles.lightText}
-                >
-                  <Date dateString={date} />
-                  <Taco length={postLength} />
-                </small>
-              </li>
-            ))}
-          </ul>
-        </section>
         <section className={utilStyles.bioContainer}>
           <div
             style={{
@@ -74,7 +55,6 @@ const Home = ({ allPostsData }: { allPostsData: IAllPostData }) => {
               alignContent: 'space-between',
             }}
           >
-            <h3 className={utilStyles.profileImg__title}>Dev Andres</h3>
             <div className={utilStyles.profileImg__container}>
               <Image
                 className={utilStyles.profileImg}
@@ -84,7 +64,7 @@ const Home = ({ allPostsData }: { allPostsData: IAllPostData }) => {
             </div>
             <div
               style={{
-                height: '1.2rem',
+                height: '0.7rem',
                 padding: '0',
                 margin: '0',
               }}
@@ -118,8 +98,14 @@ const Home = ({ allPostsData }: { allPostsData: IAllPostData }) => {
               </CopyToClipboard>
             </div>
           </div>
-          <div>
-            <p style={{ lineHeight: '1.4' }}>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              paddingBottom: '1rem',
+            }}
+          >
+            <p className={utilStyles.bioText}>
               Hi, I am Andres Alcocer and I like everything involving the world
               of frontend development. When I am not coding or writing for my
               blog I like to try new grilling recipes and keep up with the
@@ -127,6 +113,25 @@ const Home = ({ allPostsData }: { allPostsData: IAllPostData }) => {
               <span style={{ paddingLeft: '6px' }}>&#9917;</span> stats.
             </p>
           </div>
+        </section>
+        <section className={utilStyles.blogContainer}>
+          <ul className={utilStyles.list}>
+            {allPostsData.map(({ slug, date, title, postLength }) => (
+              <li className={utilStyles.listItem} key={slug}>
+                <Link href={`/posts/${slug}`}>
+                  <a className={utilStyles.headingLgB}>{title}</a>
+                </Link>
+                <br />
+                <small
+                  style={{ display: 'flex', alignItems: 'center' }}
+                  className={utilStyles.lightText}
+                >
+                  <Date dateString={date} />
+                  <Taco length={postLength} />
+                </small>
+              </li>
+            ))}
+          </ul>
         </section>
       </div>
     </Layout>

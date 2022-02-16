@@ -56,7 +56,7 @@
 }
 
 .listItem {
-  margin: 0 0 1.25rem;
+  margin: 0 0 2rem;
 }
 
 .lightText {
@@ -64,9 +64,7 @@
 }
 
 .homeContainer {
-  display: flex;
   @include responsive(tab_medium) {
-    display: flex;
     flex-direction: column-reverse;
   }
 }
@@ -77,6 +75,7 @@
   border-radius: 50%;
 
   &__container {
+    width: 10rem;
     padding: 30px;
     padding-top: 0;
     padding-bottom: 0;
@@ -93,33 +92,29 @@
   }
 
   &__title {
-    display: none;
-    @include responsive(phone) {
-      padding: 0;
-      margin: 0;
-      display: block;
-    }
+    padding: 0;
+    margin: 0;
   }
 }
 
 .bioContainer {
-  width: 30%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 70%;
 
   @include responsive(tab_medium) {
-    display: flex;
-    flex-direction: row-reverse;
-    margin-bottom: 1rem;
-    width: 100%;
-    align-items: center;
+    width: 80%;
   }
 
   @include responsive(phone) {
-    display: block;
-    margin-bottom: 0;
+    flex-direction: column;
   }
 
-  p {
-    margin-top: 0;
+  .bioText {
+    line-height: 1.5;
     text-align: center;
   }
 }
@@ -131,14 +126,17 @@
 }
 
 .social {
-  padding-bottom: 1rem;
   display: flex;
   justify-content: space-between;
 
+  @include responsive(phone) {
+    padding-bottom: 0;
+  }
+
   span {
     font-size: 3rem;
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     transition: all 0.3s;
 
     &:hover {

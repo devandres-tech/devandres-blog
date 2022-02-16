@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router'
-import { IAllPostData } from '../../pages'
 import Link from 'next/link'
+
+import styles from './pagination.module.scss'
+import { IAllPostData } from '../../pages'
 
 export default function Pagination({
   allPostsData,
@@ -15,13 +17,33 @@ export default function Pagination({
   const prevPost = allPostsData[currentIdx - 1]
 
   return (
-    <div>
-      {prevPost && (
-        <Link href={`/posts/${prevPost.slug}`}>{prevPost.title}</Link>
-      )}
-      {nextPost && (
-        <Link href={`/posts/${nextPost.slug}`}>{nextPost.title}</Link>
-      )}
+    <div className={styles.container}>
+      <div>
+        {prevPost && (
+          <Link href={`/posts/${prevPost.slug}`} passHref>
+            <div className={styles.postBtn}>
+              <i
+                className='fa-solid fa-angle-left'
+                style={{ paddingRight: '0.5rem' }}
+              />
+              <a>{prevPost.title}</a>
+            </div>
+          </Link>
+        )}
+      </div>
+      <div>
+        {nextPost && (
+          <Link href={`/posts/${nextPost.slug}`} passHref>
+            <div className={styles.postBtn}>
+              <a>{nextPost.title}</a>
+              <i
+                className='fa-solid fa-angle-right'
+                style={{ paddingLeft: '0.5rem' }}
+              />
+            </div>
+          </Link>
+        )}
+      </div>
     </div>
   )
 }

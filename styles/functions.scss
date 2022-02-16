@@ -8,14 +8,12 @@
   }
 
   @if $breakpoint == tab_medium {
-    // 980px
     @media only screen and (max-width: 65em) {
       @content;
     }
   }
 
   @if $breakpoint == tab_large {
-    // 980px
     @media only screen and (max-width: 67em) {
       @content;
     }
