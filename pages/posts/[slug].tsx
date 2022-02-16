@@ -22,7 +22,10 @@ export default function Post({
       </Head>
       <article>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-        <div className={utilStyles.lightText} style={{ display: 'flex' }}>
+        <div
+          className={utilStyles.lightText}
+          style={{ display: 'flex', alignItems: 'center' }}
+        >
           <Date dateString={postData.date} />
           <span style={{ marginLeft: '0.3rem', marginRight: '0.3rem' }}>
             &#8226;

@@ -123,7 +123,7 @@ const Home = ({ allPostsData }: { allPostsData: IAllPostData }) => {
                 </Link>
                 <br />
                 <small
-                  style={{ display: 'flex', alignItems: 'center' }}
+                  style={{ display: 'flex' }}
                   className={utilStyles.lightText}
                 >
                   <Date dateString={date} />
