@@ -23,9 +23,18 @@ export default function Layout({ children, home }: ILayout) {
       <div className={styles.container}>
         <main>{children}</main>
         {!home && (
-          <div className={styles.backToHome}>
-            <Link href='/'>
-              <a>← Back to home</a>
+          <div>
+            <Link href='/' passHref>
+              <div className={styles.homeBtn}>
+                <a style={{ width: 'fit-content' }}>
+                  ←{' '}
+                  <i
+                    className='fa-solid fa-house'
+                    style={{ paddingRight: '0.5rem' }}
+                  ></i>
+                  Home
+                </a>
+              </div>
             </Link>
           </div>
         )}

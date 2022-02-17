@@ -38,9 +38,6 @@ h1 {
 
 time {
   color: var(--color-text-secondary);
-  @include responsive(phone) {
-    font-size: 14px;
-  }
 }
 
 a {
