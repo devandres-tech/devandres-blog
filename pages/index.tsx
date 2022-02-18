@@ -17,6 +17,7 @@ export interface IPostData {
   title: string
   postLength: number
   contentHtml: string
+  markdown: string
 }
 
 export type IAllPostData = IPostData[]

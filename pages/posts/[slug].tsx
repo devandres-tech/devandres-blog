@@ -1,7 +1,9 @@
 import Head from 'next/head'
+import ReactMarkdown from 'react-markdown'
 
 import Layout from '../../components/layout/layout'
 import Date from '../../components/date'
+import CodeBlock from '../../components/codeblock'
 import Pagination from '../../components/pagination/pagination'
 import { getAllPostSlugs, getPostData, getSortedPostsData } from '../../lib/api'
 import utilStyles from '../../styles/utils.module.scss'
@@ -32,7 +34,10 @@ export default function Post({
           </span>
           <Taco length={postData.contentHtml.length} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+
+        <ReactMarkdown components={CodeBlock}>
+          {postData.markdown}
+        </ReactMarkdown>
       </article>
       <Pagination allPostsData={allPostsData} />
     </Layout>

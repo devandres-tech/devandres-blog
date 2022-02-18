@@ -59,6 +59,7 @@ export async function getPostData(slug: string) {
   return {
     slug,
     contentHtml,
+    markdown: matterResult.content,
     ...matterResult.data,
   }
 }
