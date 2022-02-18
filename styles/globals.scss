@@ -4,6 +4,7 @@ body[data-theme='light'] {
   --color-text-secondary: #666;
   --color-bg-primary: #fff;
   --color-bg-toggle: #1e90ff;
+  --color-bg-inline-code: #d4d4d4;
 }
 
 body[data-theme='dark'] {
@@ -11,14 +12,7 @@ body[data-theme='dark'] {
   --color-text-secondary: #a9adc1;
   --color-bg-primary: #121e27;
   --color-bg-toggle: #a9a9a9;
-}
-
-svg[data-theme='dark'] {
-  fill: rgb(211, 211, 211);
-}
-
-svg[data-theme='light'] {
-  fill: rgb(48, 48, 48) !important;
+  --color-bg-inline-code: #535456;
 }
 
 body {
@@ -30,6 +24,10 @@ body {
   transition: background 0.25s ease-in-out;
   line-height: 1.5;
   padding-top: 3rem;
+}
+
+nav {
+  color: #fff;
 }
 
 h1 {
@@ -48,4 +46,11 @@ a {
 span.fa-brands,
 span.fa-solid {
   font-size: 2.2rem;
+}
+
+span.inlineCode {
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-inline-code);
+  border-radius: 3px;
+  padding: 1px 4px 1px;
 }

@@ -54,7 +54,6 @@ const ThemeToggle = () => {
 
   useEffect(() => {
     document.body.dataset.theme = activeTheme
-    document.body.getElementsByTagName('nav')[0].dataset.theme = activeTheme
     window.localStorage.setItem('theme', activeTheme)
   }, [activeTheme])
 

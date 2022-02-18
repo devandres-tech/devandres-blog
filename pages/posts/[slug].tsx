@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import ReactMarkdown from 'react-markdown'
 
@@ -35,7 +36,7 @@ export default function Post({
           <Taco length={postData.contentHtml.length} />
         </div>
 
-        <ReactMarkdown components={CodeBlock}>
+        <ReactMarkdown className={'hi'} components={CodeBlock}>
           {postData.markdown}
         </ReactMarkdown>
       </article>

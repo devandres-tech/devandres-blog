@@ -19,13 +19,22 @@ const CodeBlock: Components = {
         style={materialDark}
         language={match[1]}
         PreTag='div'
+        codeTagProps={{
+          style: {
+            color: 'white',
+          },
+        }}
         {...props}
       >
         {String(children).replace(/\n$/, '')}
       </SyntaxHighlighter>
     ) : (
-      <code className={className} {...props}>
-        {children}
+      <code
+        style={{ fontFamily: 'Roboto Mono' }}
+        className={className}
+        {...props}
+      >
+        <span className={'inlineCode'}>{children}</span>
       </code>
     )
   },
