@@ -12,12 +12,14 @@ interface ILayout {
 export default function Layout({ children, home }: ILayout) {
   return (
     <div
-      style={{
-        minHeight: '95vh',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-      }}
+      style={
+        {
+          // minHeight: '95vh',
+          // display: 'flex',
+          // flexDirection: 'column',
+          // justifyContent: 'space-between',
+        }
+      }
     >
       <Navbar />
       <div className={styles.container}>
