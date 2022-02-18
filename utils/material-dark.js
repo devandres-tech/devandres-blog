@@ -83,19 +83,19 @@ export default {
     Opacity: '0.7',
   },
   atrule: {
-    color: '#c792ea',
+    color: '#ff9cff',
   },
   'attr-name': {
-    color: '#ffcb6b',
+    color: '#73b0ef',
   },
   'attr-value': {
-    color: '#a5e844',
+    color: '#76cd76',
   },
   attribute: {
-    color: '#a5e844',
+    color: '#76cd76',
   },
   boolean: {
-    color: '#c792ea',
+    color: '#ff9cff',
   },
   builtin: {
     color: '#ffcb6b',
@@ -110,13 +110,13 @@ export default {
     color: '#ffcb6b',
   },
   'class-name': {
-    color: '#f2ff00',
+    color: '#fee486',
   },
   comment: {
     color: '#616161',
   },
   constant: {
-    color: '#c792ea',
+    color: '#ff9cff',
   },
   deleted: {
     color: '#ff6666',
@@ -128,30 +128,30 @@ export default {
     color: '#ff6666',
   },
   function: {
-    color: '#c792ea',
+    color: '#73b0ef',
   },
   hexcode: {
     color: '#f2ff00',
   },
   id: {
-    color: '#c792ea',
+    color: '#ff9cff',
     fontWeight: 'bold',
   },
   important: {
-    color: '#c792ea',
+    color: '#ff9cff',
     fontWeight: 'bold',
   },
   inserted: {
     color: '#80cbc4',
   },
   keyword: {
-    color: '#c792ea',
+    color: '#ff9cff',
   },
   number: {
     color: '#fd9170',
   },
   operator: {
-    color: '#89ddff',
+    color: '#ff9cff',
   },
   prolog: {
     color: '#616161',
@@ -160,12 +160,13 @@ export default {
     color: '#80cbc4',
   },
   'pseudo-class': {
-    color: '#a5e844',
+    color: '#76cd76',
   },
   'pseudo-element': {
-    color: '#a5e844',
+    color: '#76cd76',
   },
   punctuation: {
+    // todo
     color: '#89ddff',
   },
   regex: {
@@ -175,13 +176,13 @@ export default {
     color: '#ff6666',
   },
   string: {
-    color: '#a5e844',
+    color: '#76cd76',
   },
   symbol: {
-    color: '#c792ea',
+    color: '#ff9cff',
   },
   tag: {
-    color: '#ff6666',
+    color: '#ff9cff',
   },
   unit: {
     color: '#fd9170',

@@ -11,7 +11,7 @@ const CodeBlock: Components = {
         customStyle={{
           lineHeight: '1.5',
           fontSize: '14px',
-          backgroundColor: '#0a0a0a',
+          backgroundColor: '#01101c',
           borderRadius: '10px',
         }}
         lineNumberStyle={{ marginLeft: '-12px', marginRight: '12px' }}
