@@ -2,17 +2,17 @@ import { useState, useEffect } from 'react'
 import styled from '@emotion/styled'
 
 const ToggleButton = styled.button`
-  --toggle-width: 62px;
-  --toggle-height: 28px;
-  --toggle-padding: 1px;
+  --toggle-width: 55px;
+  --toggle-height: 30px;
+  --toggle-padding: 2px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1;
   width: var(--toggle-width);
-  height: var(--toggle-height);
+  height: 22px;
   padding: var(--toggle-padding);
   border: 0;
   border-radius: calc(var(--toggle-width) / 2);
@@ -33,16 +33,16 @@ const ToggleButton = styled.button`
 
 const ToggleThumb = styled.span`
   position: absolute;
-  top: var(--toggle-padding);
+  top: var(--toggle-padding - 4);
   left: var(--toggle-padding);
-  width: calc(var(--toggle-height) - (var(--toggle-padding) * 2));
-  height: calc(var(--toggle-height) - (var(--toggle-padding) * 2));
+  width: calc(var(--toggle-height) - (var(--toggle-padding) * 3));
+  height: calc(var(--toggle-height) - (var(--toggle-padding) * 3));
   border-radius: 50%;
   background: white;
   transition: transform 0.25s ease-in-out;
   transform: ${(p: any) =>
     p.theme === 'dark'
-      ? 'translate3d(calc(var(--toggle-width) - var(--toggle-height)), 0, 0)'
+      ? 'translate3d(calc(var(--toggle-width) - 28px), 0, 0)'
       : 'none'};
 `
 

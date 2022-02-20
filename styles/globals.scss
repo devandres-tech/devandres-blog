@@ -32,6 +32,9 @@ nav {
 
 h1 {
   color: var(--color-text-primary);
+  padding-top: 0.2rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 time {
@@ -52,5 +55,5 @@ span.inlineCode {
   color: var(--color-text-primary);
   background-color: var(--color-bg-inline-code);
   border-radius: 3px;
-  padding: 1px 4px 1px;
+  padding: 0 5px 1px;
 }

@@ -22,6 +22,7 @@ import {
   Teams,
   Matches,
   Contact,
+  NotFound
 } from './routes'
 
 const rootElement = document.getElementById('root')
@@ -41,6 +42,7 @@ render(
         <Route path='/matches' element={<Matches />} />
       </Route>
       <Route path='/contact-us' element={<Contact />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   </BrowserRouter>,
   rootElement
@@ -54,5 +56,19 @@ Now we are required to wrap our routes in a `<BrowserRouter />` component. We al
 <Route path="players/new" element={<Player />} />
 ```
 
-In this case, `/players/new` is a more specific match than `/players/:playerId` so it will render the `<NewPlayerForm />` component.
-Notice that the route
+In this case, `/players/new` is a more specific match than `/players/:playerId` so it will render the `<NewPlayerForm />` component. Notice that the route `/players/new` sits below the route `players/:playerId` so ordering is not taken into account.
+
+# Nested Routes
+
+Nested routes are probably one of the most important features of react router v6. Nested routes
+allow for dynamic layouts, so no need to worry about creating complex layout code.
+
+When routes are nested so will their paths (child inheriting the parent). Following our previous example, the defined paths are:
+
+- `"/"`
+- `"/players"`
+- `"/players/new"`
+- `"/players/:playerId"`
+- `"/teams"`
+- `"/matches"`
+- `"/contact-us"`
