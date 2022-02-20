@@ -282,4 +282,4 @@ function NewPlayerForm() {
 
 # Diving Deeper
 
-These are the basic features of React Router v6. If you would like to dive deeper and look up some examples such as Authentication, Custom Active Links, Lazy Loading, Modal and much more check out the [offical docs](https://google.com).
+These are the basic features of React Router v6. If you would like to dive deeper and look up some examples such as Authentication, Custom Active Links, Lazy Loading, Modal and much more check out the [offical docs](https://reactrouter.com/docs/en/v6).
