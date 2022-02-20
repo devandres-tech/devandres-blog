@@ -58,8 +58,12 @@ span.inlineCode {
   padding: 0 5px 1px;
 }
 
-div.markdown-text {
+div.markdown-content {
   a {
     color: $color-active-link;
+  }
+
+  img {
+    max-width: 100% !important;
   }
 }

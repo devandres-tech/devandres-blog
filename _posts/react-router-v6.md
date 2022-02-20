@@ -4,6 +4,8 @@ date: '2021-12-20'
 description: 'React router v6 new features'
 ---
 
+![image info](/images/react-router-v6.jpg)
+
 React router version 6 is here with lots of improvements! React router now matches the URL against your route config to enable a dynamic layout mechanism. Your UI layouts will reflect segments of the URL allowing you to build a full user interface that maps to your URL.
 
 # Route Configuration
@@ -184,7 +186,7 @@ In our route config there are 3 types of routes that are pathless:
   </App>
   ```
 
-  The `<NotFound />` component will also have the same layout
+  The `<NotFound />` component will also have the same layout.
 
 # Relative Links
 
@@ -231,7 +233,7 @@ function Player() {
 
 # Search Params
 
- You can manipulate and read search params with the `useSearchParams` hook. It has the similar behavior as the `useState` hook but stores and sets search params in the URL search params instead of in memory
+ You can manipulate and read search params with the `useSearchParams` hook. It has the similar behavior as the `useState` hook but stores and sets search params in the URL search params instead of in memory.
 
 ```jsx
 import { useSearchParams } from 'react-router-dom'
@@ -259,7 +261,7 @@ The `onChange` function is setting the search param "name": `/players/top-scorer
 
 # Navigate Function
 
-You can programmatically navigate to a URL with the `useNavigate` hook, useful for logging users out or after a form submission
+You can programmatically navigate to a URL with the `useNavigate` hook, useful for logging users out or after a form submission:
 
 ```jsx
 import { useNavigate } from 'react-router-dom'

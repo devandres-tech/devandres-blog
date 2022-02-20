@@ -7,7 +7,7 @@ export default function About() {
       <Head>
         <title>About</title>
       </Head>
-      <article>
+      <article style={{ height: '60vh' }}>
         <h1>About</h1>
         <p>
           I am a software developer who is passionate about frontend

@@ -62,6 +62,7 @@
 }
 
 .homeContainer {
+  height: 70vh;
   @include responsive(tab_medium) {
     flex-direction: column-reverse;
   }

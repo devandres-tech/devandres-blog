@@ -8,7 +8,7 @@ import Layout from '../components/layout/layout'
 import utilStyles from '../styles/utils.module.scss'
 import { getSortedPostsData } from '../lib/api'
 import Date from '../components/date'
-import ProfileImg from '../public/profile-img.png'
+import ProfileImg from '../public/images/profile-img.png'
 import Taco from '../components/taco'
 
 export interface IPostData {

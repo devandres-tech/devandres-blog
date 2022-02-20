@@ -36,7 +36,7 @@ export default function Post({
           <Taco length={postData.contentHtml.length} />
         </div>
 
-        <ReactMarkdown className='markdown-text' components={CodeBlock}>
+        <ReactMarkdown className='markdown-content' components={CodeBlock}>
           {postData.markdown}
         </ReactMarkdown>
       </article>
