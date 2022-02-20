@@ -43,7 +43,7 @@ const Home = ({ allPostsData }: { allPostsData: IAllPostData }) => {
           name='description'
           content='Andres Alcocer Blog Dev Andres Frontend Front end Front-end developer React React Native Netflix-Clone Netflix Clone'
         />
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/images/profile-img.png' />
       </Head>
       <div className={utilStyles.homeContainer}>
         <section className={utilStyles.bioContainer}>
