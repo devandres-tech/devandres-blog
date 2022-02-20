@@ -36,13 +36,12 @@ render(
           <Route path=':playerId' element={<Player />} />
           <Route path='new' element={<NewPlayerForm />} />
         </Route>
+        <Route path='/teams' element={<Teams />} />
       </Route>
       <Route element={<PageLayout />}>
-        <Route path='/teams' element={<Teams />} />
-        <Route path='/matches' element={<Matches />} />
+        <Route path='/contact-us' element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
-      <Route path='/contact-us' element={<Contact />} />
-      <Route path="*" element={<NotFound />} />
     </Routes>
   </BrowserRouter>,
   rootElement
@@ -70,5 +69,98 @@ When routes are nested so will their paths (child inheriting the parent). Follow
 - `"/players/new"`
 - `"/players/:playerId"`
 - `"/teams"`
-- `"/matches"`
 - `"/contact-us"`
+
+The component tree will change depending on the current path, for example when the URL is `/players/new`  the component tree will be
+
+```jsx
+<App>
+  <Players>
+    <NewPlayerForm /> 
+  </Players>
+</App>
+```
+
+And when the URL changes to `/players/:playerId`, the layout will change to
+
+```jsx
+<App>
+  <Players>
+    <PlayerId />
+  </Players>
+</App>
+```
+
+Parent routes are responsible for rendering child routes, in this case the parent route is `/players` and the child routes are
+`/players/new` and `/players/:playerId`. Notice that only the inner component changed as these where child routes.
+
+Parent routes will need the `<Outlet />` component in order to render the child routes:
+
+```jsx
+import { Outlet } from 'react-router-dom'
+
+function Players() {
+ return (
+  <div>
+    <h1>Players route</h1>
+    <Outlet />
+  </div>
+ )
+}
+
+function NewPlayerForm() {
+ return (
+  <div>
+    <h1>New Player route form</h1>
+  </div>
+ )
+}
+
+function Player() {
+ return (
+  <div>
+    <h1>Player id route</h1>
+  </div>
+ )
+}
+```
+
+You will also notice that the `/players` route is a child route of `/`, so the `<App />` component will also need
+the `<Outlet />` component:
+
+```jsx
+import { Outlet } from 'react-router-dom'
+
+function App() {
+ return (
+  <div>
+    <h1>Players route</h1>
+    <Outlet />
+  </div>
+ )
+}
+
+function Players() {
+ return (
+  <div>
+    <h1>Players route</h1>
+    <Outlet />
+  </div>
+ )
+}
+```
+
+# Pathless routes
+
+In our route config we defined 3 routes that are pathless:
+
+```jsx
+<Route index element={<PlayerStats />} />
+<Route element={<PageLayout />}>
+<Route path="/*" element={<NotFound />}>
+```
+
+- ### Index Routes
+
+  The first route is an Index route. They are responsible for rendering content when no child routes are matched.
+  you can think of it as the default case for the parent route.
