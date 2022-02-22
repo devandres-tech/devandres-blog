@@ -6,6 +6,10 @@ export default function About() {
     <Layout>
       <Head>
         <title>About</title>
+        <meta
+          name='description'
+          content='Andres Alcocer Blog Dev Andres Frontend Front end Front-end developer React React Native Netflix-Clone Netflix Clone About about'
+        />
       </Head>
       <article style={{ height: '60vh' }}>
         <h1>About</h1>
