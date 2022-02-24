@@ -22,10 +22,17 @@ export default function Post({
     <Layout>
       <Head>
         <title>{postData.title}</title>
+        <meta charSet='UTF-8' />
+        <meta name='description' content={postData.description} />
         <meta
-          name='description'
-          content='Andres Alcocer Blog Dev Andres Frontend Front end Front-end developer React React Native Netflix-Clone Netflix Clone'
+          name='keywords'
+          content='HTML, CSS, JavaScript, React, Netflix Clone, React Native, React-Native, Dev Andres, Tech, SASS, TypeScript, Frontend Developer, Developer, Software Developer, Front-end, Nodejs, Next.js, Spotify Clone'
         />
+        <meta name='author' content='Andres Alcocer' />
+        <meta
+          name='viewport'
+          content='width=device-width, initial-scale=1.0'
+        ></meta>
       </Head>
       <article>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>

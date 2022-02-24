@@ -18,6 +18,7 @@ export interface IPostData {
   postLength: number
   contentHtml: string
   markdown: string
+  description: string
 }
 
 export type IAllPostData = IPostData[]
@@ -39,10 +40,20 @@ const Home = ({ allPostsData }: { allPostsData: IAllPostData }) => {
     <Layout home>
       <Head>
         <title>Andres Alcocer | Blog</title>
+        <meta charSet='UTF-8' />
         <meta
           name='description'
-          content='Andres Alcocer Blog Dev Andres Frontend Front end Front-end developer React React Native Netflix-Clone Netflix Clone'
+          content='Andres Alcocer blog. Frontend Developer who enjoys working with React.'
         />
+        <meta
+          name='keywords'
+          content='HTML, CSS, JavaScript, React, Netflix Clone, React Native, React-Native, Dev Andres, Tech, SASS, TypeScript, Frontend Developer, Developer, Software Developer, Front-end, Nodejs, Next.js, Spotify Clone'
+        />
+        <meta name='author' content='Andres Alcocer' />
+        <meta
+          name='viewport'
+          content='width=device-width, initial-scale=1.0'
+        ></meta>
         <link rel='icon' href='/images/profile-img.png' />
       </Head>
       <div className={utilStyles.homeContainer}>

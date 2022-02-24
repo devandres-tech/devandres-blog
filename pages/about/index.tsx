@@ -6,10 +6,20 @@ export default function About() {
     <Layout>
       <Head>
         <title>About</title>
+        <meta charSet='UTF-8' />
         <meta
           name='description'
-          content='Andres Alcocer Blog Dev Andres Frontend Front end Front-end developer React React Native Netflix-Clone Netflix Clone About about'
+          content='Andres Alcocer blog. Frontend Developer who enjoys working with React.'
         />
+        <meta
+          name='keywords'
+          content='HTML, CSS, JavaScript, React, Netflix Clone, React Native, React-Native, Dev Andres, Tech, SASS, TypeScript, Frontend Developer, Developer, Software Developer, Front-end, Nodejs, Next.js, Spotify Clone'
+        />
+        <meta name='author' content='Andres Alcocer' />
+        <meta
+          name='viewport'
+          content='width=device-width, initial-scale=1.0'
+        ></meta>
       </Head>
       <article style={{ height: '60vh' }}>
         <h1>About</h1>
