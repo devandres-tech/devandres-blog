@@ -12,7 +12,7 @@ Next.js currently supports two forms of pre-rendering your content with **Static
 
 Out of the box Next.js pre-renders every page head of time, instead of having it all done by client side javascript. The way it does it is by a process known as **hydration**. Initially, each HTML is rendered with the minimal JavaScript necessary. This way your users have something to look at while your JavaScript loads. Then the JavaScript behavior (event handlers, interactivity, etc.) is added back to the HTML page, it becomes "**hydrated**".
 
-![image info](/images/hydration.png)
+![hydration](/images/hydration.png)
 
 In contrast to a client only rendered app (rendered by a browser) your users have to wait until all of the JavaScript is loaded  in order to see something on the page. If your JavaScript is large your users will not be happy staring at a blank page for some time.
 
@@ -22,7 +22,7 @@ Now let's see the two forms of **pre-rendering**.
 
 ## Static Generation
 
-![image info](/images/ssg.png)
+![ssg](/images/ssg.png)
 
 With **Static Generation** the HTML will be generated at **build time**, the same HTML will be used for each request. Essentially, your site requests are all being generated ahead of time making your site super fast. No need to wait for the server to fetch the requested page. Since your files are being statically generated you can store them in a CDN for even more improved performance (this blog uses Static Generation 😉).
 
