@@ -1,6 +1,10 @@
 .footerContainer {
+  margin-top: 25vh;
+  @include responsive(phone) {
+    margin-top: 5vh;
+  }
   text-align: center;
-  height: 10rem;
+  height: 15rem;
   background-color: $color-navbar-bg;
   display: flex;
   justify-content: center;
