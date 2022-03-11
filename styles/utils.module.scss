@@ -25,6 +25,7 @@
   line-height: 1.4;
   font-weight: 800;
   margin: 1rem 0;
+  color: var(--color-text-primary);
 
   &:hover {
     color: $color-active-link;
@@ -136,7 +137,7 @@
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     transition: all 0.3s;
-
+    color: var(--color-text-primary);
     &:hover {
       cursor: pointer;
       transition: all 0.3s;
