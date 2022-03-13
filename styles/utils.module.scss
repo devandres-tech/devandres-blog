@@ -119,6 +119,7 @@
 }
 
 .blogContainer {
+  margin-top: 4rem;
   @include responsive(tab_medium) {
     width: 100%;
   }
