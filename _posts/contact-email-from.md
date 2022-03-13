@@ -1,7 +1,7 @@
 ---
 title: "Get Form Data on Email | Next.js + SmtpJS"
 date: '2022-03-12'
-description: 'Managing react state, UI state and Cache state'
+description: 'Create a contact form and send data to your inbox'
 ---
 
 ![contact logic](/images/contact-f.png)
