@@ -94,11 +94,12 @@ export default async function handler(req, res) {
       Subject: `Email from: ${req.body.name}`,
       Body: req.body.message,
     })
+
+    res.status(200).json({ response: 'Successfully sent email' })
   } catch (error) {
     res.status(500).json({ response: 'Internal server error' })
   }
 
-  res.status(200).json({ response: 'Successfully sent email' })
 }
 // contact.js
 ```
@@ -171,11 +172,12 @@ export default async function handler(req, res) {
       Subject: `Email from: ${req.body.name}`,
       Body: req.body.message,
     })
+    
+    res.status(200).json({ response: 'Successfully sent email' })
   } catch (error) {
     res.status(500).json({ response: 'Internal server error' })
   }
 
-  res.status(200).json({ response: 'Successfully sent email' })
 }
 ```
 
