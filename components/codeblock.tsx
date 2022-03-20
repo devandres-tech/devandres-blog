@@ -12,7 +12,7 @@ const CodeBlock: Components = {
           lineHeight: '1.5',
           fontSize: '14px',
           backgroundColor: '#01101c',
-          borderRadius: '10px',
+          borderRadius: '5px',
         }}
         lineNumberStyle={{ marginLeft: '-12px', marginRight: '12px' }}
         showLineNumbers
