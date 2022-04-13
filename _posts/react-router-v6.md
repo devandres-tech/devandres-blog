@@ -1,5 +1,5 @@
 ---
-title: "What's knew in React Router v6"
+title: "What's new in React Router v6"
 date: '2021-12-20'
 description: 'React router v6 new features'
 ---
