@@ -36,16 +36,15 @@ Notice there is no need to decipher what they mean, we simply read them to under
 
 | Purpose of Variable | Good Descriptors | Bad Descriptors |
 | --------------- | --------------- | --------------- |
-| Current date | `currentDate`, `todaysDate` | `cd`, `current`, `d`, `dt`, `x1`, `x2` |
-| Velocity of a cheetah | `cheetahVelocity`, `cheetahVelocityInMph` | `tv`, `vlc` `v1` `cheetah` |
-| Molecules per drop of water | `moleculesPerWaterDroplet`| `m`, `p1`, `mpwd`, `molecules`, `y` |
-| Running total of goals scored | `totalGoalsScored`, `goalsScored` | `total`, `x1`, `y2`, `goals`, `currGS`|
+| Current date | *currentDate*, *todaysDate* | *cd*, *current*, *d*, *dt*, *x1*, *x2* |
+| Velocity of a cheetah | *cheetahVelocity*, *cheetahVelocityInMph* | *tv*, *vlc* *v1* *cheetah* |
+| Molecules per drop of water | *moleculesPerWaterDroplet* | *m*, *p1*, *mpwd*, *molecules*, *y* |
+| Running total of goals scored | *totalGoalsScored*, *goalsScored* | *total*, *x1*, *y2*, *goals*, *currGS*|
 
-The names `totalGoalsScored` and `goalsScored` are good names because they accurately and descriptively capture the idea of "the running total of goals scored", in fact they use precisely these words. Usually, ordinary words are your best options. `x1`, and `y2` are bad because they are too short and don't represent anything. `total` is bad because it does not tell you what the total is. `goals` is also bad because by itself it could mean something different - like goals as in a personal accomplishment in life. We can derive from this that good descriptors are usually specific as possible, names like `x`, `i`, and `average` are general, they are used for more than one purpose. 
+The names `totalGoalsScored` and `goalsScored` are good names because they accurately and descriptively capture the idea of "the running total of goals scored", in fact they use precisely these words. Usually, ordinary words are your best options. `x1`, and `y2` are bad because they are too short and don't represent anything. `total` is bad because it does not tell you what the total is. `goals` is also bad because by itself it could mean something different - like goals as in a personal accomplishment in life. We can derive from this that good descriptors are usually specific as possible, names like `x`, `i`, and `average` are general, they are used for more than one purpose.
 
 ### Optimum Name Length
 
 Studies have shown that the effort required to debug a program is minimized when a variable has an average of 10 to 16 characters long. Names that are too short, `x1`, `x2`, don't convey any meaning. Names that are too long are prone to syntax errors and can muddle the visual structure of a program. Of course not every variable will have 10 to 16 characters, it just means that if your variables are too short you should try to be more descriptive and if your variables are too long, you should try to trim it (for example by using commonly used abbreviations).
 
 Let's us take a look at the following table to illustrate the point:
-
