@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 import Layout from '../../components/layout/layout'
 import Date from '../../components/date'
@@ -47,7 +48,11 @@ export default function Post({
           <Taco length={postData.contentHtml.length} />
         </div>
 
-        <ReactMarkdown className='markdown-content' components={CodeBlock}>
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm]}
+          className='markdown-content'
+          components={CodeBlock}
+        >
           {postData.markdown}
         </ReactMarkdown>
       </article>

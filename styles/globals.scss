@@ -26,6 +26,14 @@ body {
   padding-top: 3rem;
 }
 
+table,
+th,
+td {
+  border: 1px solid rgba(0, 0, 0, 0.154);
+  border-collapse: collapse;
+  padding: 10px;
+}
+
 nav {
   color: #fff;
 }
